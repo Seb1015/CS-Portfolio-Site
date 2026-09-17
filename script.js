@@ -417,20 +417,23 @@ initKeyboardNavigation();
 
 // Add print functionality
 function initPrintFunctionality() {
-    // Add print button (optional)
+    // Add quick resume button
     const printButton = document.createElement('button');
-    printButton.innerHTML = '<i class="fas fa-print"></i> Print Resume';
-    printButton.className = 'btn btn-secondary print-btn';
+    printButton.innerHTML = '<i class="fas fa-file-pdf"></i> View & Print Resume';
+    printButton.className = 'btn btn-primary print-btn';
     printButton.style.cssText = `
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 25px;
+        right: 25px;
         z-index: 1000;
         display: none;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
     `;
     
     printButton.addEventListener('click', function() {
-        window.print();
+        window.open('resume.html', '_blank');
     });
     
     document.body.appendChild(printButton);
