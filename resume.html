@@ -353,19 +353,21 @@
             color: var(--primary);
         }
 
-        /* Print Media Query - Optimized for Exact Single Page */
+        /* Print Media Query - Guaranteed Exact Single Page */
         @media print {
             @page {
                 size: letter;
-                margin: 0.26in 0.42in 0.22in 0.42in;
+                margin: 0.22in 0.35in 0.18in 0.35in;
             }
 
-            body {
+            html, body {
                 background: #ffffff !important;
-                font-size: 8.75pt !important;
-                line-height: 1.28 !important;
+                font-size: 8.2pt !important;
+                line-height: 1.22 !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                margin: 0 !important;
+                padding: 0 !important;
             }
 
             .action-bar {
@@ -388,67 +390,81 @@
             }
 
             .header {
-                margin-bottom: 0.32rem !important;
-                padding-bottom: 0.18rem !important;
+                margin-bottom: 0.22rem !important;
+                padding-bottom: 0.14rem !important;
+                border-bottom: 1.25px solid #0f172a !important;
             }
 
             .header h1 {
-                font-size: 17pt !important;
-                margin-bottom: 0.15rem !important;
+                font-size: 15.5pt !important;
+                margin-bottom: 0.08rem !important;
             }
 
             .header .contact-line {
-                font-size: 8.2pt !important;
-                margin-bottom: 0.1rem !important;
+                font-size: 7.8pt !important;
+                margin-bottom: 0.05rem !important;
+                gap: 0.35rem !important;
             }
 
             .section {
-                margin-bottom: 0.32rem !important;
+                margin-bottom: 0.22rem !important;
             }
 
             .section-header {
-                font-size: 9pt !important;
-                padding-bottom: 0.08rem !important;
-                margin-bottom: 0.2rem !important;
+                font-size: 8.5pt !important;
+                padding-bottom: 0.04rem !important;
+                margin-bottom: 0.12rem !important;
+                border-bottom: 1px solid #94a3b8 !important;
             }
 
             .skills-table td {
-                padding: 0.04rem 0 !important;
-                font-size: 8.4pt !important;
+                padding: 0.02rem 0 !important;
+                font-size: 7.85pt !important;
+            }
+
+            .skills-label {
+                width: 1.35in !important;
             }
 
             .entry {
-                margin-bottom: 0.22rem !important;
-                break-inside: avoid;
+                margin-bottom: 0.14rem !important;
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
             }
 
             .entry-title {
-                font-size: 9.2pt !important;
+                font-size: 8.6pt !important;
             }
 
             .entry-date {
-                font-size: 8.2pt !important;
+                font-size: 7.8pt !important;
             }
 
             .entry-subtitle {
-                font-size: 8.2pt !important;
-                margin-bottom: 0.08rem !important;
+                font-size: 7.8pt !important;
+                margin-bottom: 0.04rem !important;
+            }
+
+            .bullet-list {
+                padding-left: 0.7rem !important;
+                margin-top: 0.04rem !important;
             }
 
             .bullet-list li {
-                font-size: 8.25pt !important;
-                line-height: 1.24 !important;
-                margin-bottom: 0.08rem !important;
+                font-size: 7.85pt !important;
+                line-height: 1.2 !important;
+                margin-bottom: 0.05rem !important;
             }
 
             .project-tech-line {
-                font-size: 8pt !important;
-                margin-bottom: 0.06rem !important;
+                font-size: 7.5pt !important;
+                margin-bottom: 0.04rem !important;
             }
 
             .awards-list {
-                font-size: 8.2pt !important;
-                gap: 0.2rem 0.85rem !important;
+                font-size: 7.8pt !important;
+                gap: 0.15rem 0.65rem !important;
+                padding-left: 0.35rem !important;
             }
 
             a {
